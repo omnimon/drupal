@@ -1,0 +1,58 @@
+{#{% extends "@classy/content/page-title.html.twig" %}#}
+{#
+/**
+ * @file
+ * Bartik's theme implementation for a page title.
+ *
+ * Available variables:
+ * - title_attributes: HTML attributes for the page title element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title: The page title, for use in the actual content.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ */
+#}
+<div class="layout-container">
+
+    <header role="banner">
+        {{ page.header }}
+    </header>
+
+    {{ page.primary_menu }}
+    {{ page.secondary_menu }}
+
+    {{ page.breadcrumb }}
+
+    {{ page.highlighted }}
+
+    {{ page.help }}
+
+    <main role="main">
+        <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+        <div class="layout-content">
+            {{ page.content }}
+        </div>{# /.layout-content #}
+
+        {% if page.sidebar_first %}
+            <aside class="layout-sidebar-first" role="complementary">
+                {{ page.sidebar_first }}
+            </aside>
+        {% endif %}
+
+        {% if page.sidebar_second %}
+            <aside class="layout-sidebar-second" role="complementary">
+                {{ page.sidebar_second }}
+            </aside>
+        {% endif %}
+
+    </main>
+
+    {% if page.footer %}
+        <footer role="contentinfo">
+            {{ page.footer }}
+        </footer>
+    {% endif %}
+
+</div>{# /.layout-container #}

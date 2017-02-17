@@ -1,0 +1,21 @@
+omega_subtheme:
+  omega:
+    allow_clone_for_subtheme: true
+    allow_enable_disable: true
+    title: 'Default library for the omega_subtheme theme'
+    description: 'Default Omega subtheme library description. Please provide a more meaningful description (and title) for this library by editing the omega_subtheme.libraries.yml file.'
+    scss: 
+      style/css/omega_subtheme.css: 'style/scss/omega_subtheme.scss'
+  version: VERSION
+  js:
+    js/omega_subtheme.js: {}
+  css:
+    theme:
+      style/css/omega_subtheme.css: {}
+    layout: 
+      #style/css/layout/some-layout-file.css: {}
+    component:
+      #style/css/components/some-component.css: {}
+  dependencies:
+    - core/jquery
+    

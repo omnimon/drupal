@@ -1,0 +1,4 @@
+$HOME/var/www/drupal/sites/default/settings.php
+$HOME/var/www/drupal/sites/default/files/*
+$HOME/var/www/drupal/sites/default/private/*
+$HOME/var/www/drupal/sites/development.services.yml
